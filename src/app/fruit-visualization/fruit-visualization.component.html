@@ -1,0 +1,21 @@
+<div class="bar-chart-container" *ngIf="!isLoading">
+    <div *ngFor="let fruit of sortedFruits" class="bar-container">
+      <div 
+        class="bar"
+        [style.width.%]="(fruit.count / fruitCounts[fruit.fruit]) * 100"
+        [class.selected]="selectedFruit === fruit.fruit"
+        (click)="onBarClick(fruit.fruit)">
+        <span class="fruit-label">{{ fruit.fruit }} ({{ fruit.count }})</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="person-list">
+    <h3>People who like {{ selectedFruit || 'any' }}:</h3>
+    <ul>
+      <li *ngFor="let person of filterListByFruit(selectedFruit)">
+        {{ person.name }} - {{ person.favoriteFruit }}
+      </li>
+    </ul>
+  </div>
+  

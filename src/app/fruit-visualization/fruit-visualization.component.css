@@ -1,0 +1,50 @@
+.bar-chart-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .bar-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .bar {
+    background-color: blueviolet;
+    height: 30px;
+    transition: width 0.5s ease-out;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+  }
+  
+  .bar.selected {
+    background-color: lightcoral;
+    border: 2px solid darkred;
+  }
+  
+  .fruit-label {
+    padding-left: 10px;
+  }
+  
+  .person-list {
+    margin-top: 20px;
+  }
+  
+  .person-list h3 {
+    font-size: 18px;
+  }
+  
+  .person-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .person-list li {
+    margin-bottom: 10px;
+  }
+  
